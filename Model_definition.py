@@ -28,17 +28,6 @@ def NLP_Model(total_words_len) :
 
     return model
 
-    """
-    model = Sequential()
-    model.add(Embedding(total_words_len, 512, input_length = 200)) # 임베딩 벡터 차원 512
-    model.add(Dropout(0.1))
-    model.add(Conv1D(768, 12, activation = 'relu')) # GeLU
-    model.add(GlobalMaxPool1D()) # 가장 큰 벡터를 반환
-    model.add(Dense(12, activation='relu')) # 은닉 계층
-    model.add(Dropout(0.1))
-    model.add(Dense(1, activation='sigmoid')) # 마지막 계층 활성화 함수로 시그모이드
-    """
-
 # 주가 모델
 def Stock_Model(feature) :
     model = Sequential()

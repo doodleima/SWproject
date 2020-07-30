@@ -33,7 +33,7 @@ Y_test = np.load(open('..\\word_dir\\test_label.npy', 'rb'))
 data_configs = json.load(open('..\\word_dir\\data_configs.json', 'r', -1, "UTF-8-SIG"))
 total_words_len = data_configs['vocab_size']
 
-os.makedirs('model', exist_ok= True)
+#os.makedirs('model', exist_ok= True)
 ckpoint = ModelCheckpoint('../model/model.h5', monitor ='val_accuracy', mode ='max', verbose = 1, save_best_only = True)
 erstoping = EarlyStopping(monitor = 'val_loss', mode = 'min', verbose = 1, patience = 5)
 
